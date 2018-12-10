@@ -1,0 +1,84 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Пример API</title>
+	<!-----------------------------------Начало вставки стилей скриптов обработки карты--------------------------------->
+	<script type="text/javascript" src="./js/v4/belgis_map_api.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script ype="text/javascript" src="./js/jquery-ui.min.js" t></script>
+	<link type="text/css" href="./css/cupertino/jquery-ui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="./css/belgis_main.min.css" type="text/css">
+	<!-----------------------------------Конец вставки стилей скриптов обработки карты---------------------------------->
+</head>	
+<body>
+	<div style="position:absolute;left:3%;top:10%">
+		<div style="cursor:pointer;color:blue;padding-bottom:5px;" onclick="$('#map').dialog('open');">Координаты</div>
+		<label for="coord_lat">Latitude: </label><input id="coord_lat"/><br><br>
+		<label for="coord_lon">Longitude: </label><input id="coord_lon"/>
+	</div>
+	
+	<!-----------------------------------Диалог с картой---------------------------------->
+	<div id="map" title="Изменение координат">
+		<div class="belgis_scale belgis_box" style="display:none;">
+			<img id="belgis_scale_ch" src=""/>
+			<div id="viewCoord"></div>
+		</div>
+		<div id="belgis_main" style="width: 520px; height: 480px;">	
+			<div class="belgis_circle" style="display:none;">
+				<a class="belgis_circle_left" href="#" onClick="onClickMove('left');"></a>
+				<a class="belgis_circle_top" href="#" onClick="onClickMove('top');"></a>
+				<a class="belgis_circle_right" href="#" onClick="onClickMove('right');"></a>
+				<a class="belgis_circle_bottom" href="#" onClick="onClickMove('bottom');"></a>
+				<a class="belgis_circle_center" href="#" onClick="onClickMove('center');"><img src="./images/belarus.png"/></a>
+			</div>
+			<div class="belgis_control_scale" style="display:none;">
+				<div class="belgis_drag" id="belgis_drag"></div>
+				<div class="belgis_maximize" id="belgis_maximize" onClick="onClickDrag('maximize');">+</div>	
+				<div class="belgis_drag_line" onClick="onClickMove('drag_line');"></div>
+				<div class="belgis_minimize" id="belgis_minimize" onClick="onClickDrag('minimize');">-</div>
+			</div>
+			<div id="belgis_wait" style="position: absolute; z-index: 100;"><strong><img src="./images/35-0.gif" /></strong></div>
+			<canvas id="belgis_map" style="position: absolute;">Your browser does not support the HTML5 canvas tag.</canvas>
+			<canvas id="belgis_overlay" style="position: absolute;">Your browser does not support the HTML5 canvas tag.</canvas>
+			<canvas id="belgis_vector" style="position: absolute;">Your browser does not support the HTML5 canvas tag.</canvas>
+			<div id="belgis_bubbles" style="position: absolute;"></div>
+			<div id="belgis_poi" style="position: absolute;"></div>
+		</div>
+	</div>
+	<!-----------------------------------Диалог с картой---------------------------------->
+
+	<script language="javascript1.2" type="text/javascript">
+	$( window ).load(function(){
+	
+		$("#map").dialog({
+			autoOpen: false,
+			width: 550,
+			height: 550,
+			resizable: false,
+			close: function( event, ui ) {}
+		});
+
+		map=new BelgeoMap(window.location.host);
+		map.init('1',27.54946,53.90082,9,6,"",12,"osm_true");
+		
+		var clickStart=function(evt,x,y) {
+			clickFlag=true;
+		};
+		var clickEnd=function(evt,x,y) {
+			if (clickFlag) {
+				document.getElementById("coord_lat").value = x;
+				document.getElementById("coord_lon").value = y;
+			}
+		};
+		map.MapObserve(2,"mousemove",function(evt,x,y) {
+			clickFlag=false;
+		});
+		map.MapObserve(2,"mousedown",clickStart);
+		map.MapObserve(2,"touchstart",clickStart);
+		map.MapObserve(2,"mouseup",clickEnd);
+		map.MapObserve(2,"touchend",clickEnd);
+	});
+	</script>
+	</body>
+</html>

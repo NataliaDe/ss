@@ -1,0 +1,318 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+
+
+/*check.php*/
+.container-check{
+    width: 510px;
+    height: 450px;
+     text-align: center;
+}
+.form-check-content{
+    box-shadow: 0 0 15px rgba(0,0,0, .30);
+    width: 461px;
+    height: 330px;
+    background: #BBB8DE;
+    margin-top: 140px;
+    padding-top: 19px;
+}
+
+.form-check{
+    width: 510px;
+    height: 450px;
+}
+.form-check .in{
+    font-size: 19px;
+    color: #6F6D8E;   
+}
+
+.form-check .logo{
+    text-shadow:0 0 15px rgba(0,0,0, .30);
+    font-size: 24px;
+    color: #302A7B;
+    font-weight: 600;    
+}
+
+
+
+
+
+.masthead {
+    margin-top: 20px;
+margin-bottom: 5px;
+margin-left: 10px;
+    
+}
+.masthead .brand{
+    font-size: 25px;
+    
+}
+.masthead .divizion{
+    float: right;
+    font-size: 16px;
+    padding-left: 613px;
+    padding-top: 12px;
+}
+
+@media (max-width: 1199px) {
+.masthead .divizion{
+    padding-left: 400px;
+}
+}
+
+@media (max-width: 992px) {
+.masthead .divizion{
+    padding-left: 180px;
+}
+}
+
+@media (max-width: 716px) {
+.masthead .divizion{
+    padding-left: 10px;
+}
+}
+
+@media (max-width: 531px) {
+.masthead .divizion{ 
+    padding-left: 10px;
+}
+ .inverse-manual {
+   margin-top: 35px !important;
+}
+}
+
+.masthead  a:hover{
+    text-decoration: none;
+    color:#302A7B;
+}
+.masthead  a:visited{
+    text-decoration: none;
+
+}
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper .container {
+  padding-right: 0;
+  padding-left: 0;
+
+}
+
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-inverse{
+  background: #8682bd;
+}
+
+.menu .navbar-nav li a:hover{
+      background-color: #302A7B;
+}
+.menu .navbar-nav>li.active-link>a{
+      background-color: #302A7B;
+}
+.menu li a{
+    color: white !important;
+}
+
+.dropdown-menu{
+      background: #8682bd;
+}
+.dropdown-menu li a:hover{
+    background-color: #302A7B;
+}
+.dropdown-menu li a:visited{
+     background-color: black;
+}
+ .navbar-nav .menu-auth{
+display: none;
+}
+
+
+/*breadcrumb
+---------------------------------------------*/
+.bread{
+    height: 100px;
+}
+
+.bread .container{
+    margin-top: 8px;
+    padding-left: 0px;
+    padding-right: 0px;
+    
+}
+@media (max-width: 538px) {
+    .bread .container{
+    margin-top: 35px;   
+}
+}
+
+
+
+.bread .container .breadcrumb li a:hover{  
+    text-decoration: none;
+}
+.bread .container .breadcrumb li a {
+    text-decoration: none;
+    color:#302A7B;
+}
+.bread .container .breadcrumb .dropdown .dropdown-menu {
+    color:#302A7B;
+    text-decoration: none;
+       background:#f5f5f5;
+}
+
+.bread .container .breadcrumb .dropdown .dropdown-menu li a:hover{
+    text-decoration: none;
+       background-color: white;
+}
+
+.bread .container .breadcrumb .noactive {
+    
+    color:#302A7B;
+}
+
+.img-load{
+    margin-top: 200px;
+}
+
+/* CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.cont {
+    width: 100%;
+    padding-top: 0px;
+    margin-top: 110px;
+  padding-right: 5px;
+  padding-left: 13px;
+
+
+}
+#load {
+	
+
+	 background:  url(../../images/loader.gif) ;
+
+	
+}
+
+/* Center align the text within the three columns below the carousel */
+
+
+.tblink a{
+    color: #5a5a5a;
+     text-decoration: none; 
+}
+.tblink a:hover{
+    font-weight: 600;
+    transition: all .3s;
+    color: #302A7B;
+     text-decoration: none; 
+}
+.anchor a{
+    color: #5a5a5a;
+     text-decoration: none; 
+}
+
+
+table.dataTable thead th,
+table.dataTable thead td {
+  padding: 8px 36px !important;
+   vertical-align: middle !important;
+ 
+}
+
+table.dataTable tbody td {
+  padding: 0px 53px !important;
+  vertical-align: middle !important;
+}
+
+.table-manual>tbody>tr>td{
+    
+  vertical-align: middle !important;
+    
+}
+/*СЃРѕРѕР±С‰РµРЅРёРµ РѕР± СѓСЃРїРµС€РЅРѕРј РІС‹РїРѕР»РЅРµРЅРёРё Р·Р°РїСЂРѕСЃРѕРІ*/
+.suc {
+    text-align: center; 
+    font-weight: 700;
+    color: green;
+    font-size: large;
+}
+
+/*СЃРѕРѕР±С‰РµРЅРёРµ РѕР± РѕС‚СЃСѓС‚СЃС‚РІРёРё РґР°РЅРЅС‹С…*/
+.emp {
+     padding-left: 50px;
+    font-weight: 700;
+    font-size: large;
+}
+
+/*СЃРѕРѕР±С‰РµРЅРёРµ РѕР± РѕС€РёР±РєРµ*/
+.er {
+      text-align: center; 
+    font-weight: 600;
+    color: red;
+    font-size: large;
+}
+/*РћС„РѕСЂРјР»РµРЅРёРµ РѕС‚РґРµР»СЊРЅС‹С… Р±Р»РѕРєРѕРІ*/
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 0px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left:  15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left:  0;
+    
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  .masthead {
+
+margin-left: 0px;
+    
+}
+.bread .container{
+
+    padding-left: 15px;
+    padding-right: 18px;
+    
+}
+}
+
+
